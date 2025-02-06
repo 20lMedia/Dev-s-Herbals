@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev's Herbals - Organic Products</title>
+    <meta name="description" content="Explore Dev's Herbals for premium organic products, including herbs and spices.">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="icon" href="img/logo.ico" sizes="32x32" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dev's Herbals",
+      "url": "http://www.devsherbals.com",
+      "logo": "http://www.devsherbals.com/img/logo-transparent.png",
+      "description": "Dev's Herbals offers premium organic products, including herbs and spices.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 94880 19244",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo"><img src="img/logo-transparent.png" alt="Dev's Herbals Logo - Organic Products"></a>
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mail.html">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <div class="search-box">
+                    <input type="text" placeholder="Search products..." id="searchInput">
+                    <i class="ri-search-line"></i>
+                </div>
+                <div class="shoping">
+                    <img src="img/bag.png" alt="Cart">
+                    <span class="quantity">0</span>
+                </div>
+                <div class="ri-menu-line" id="menu-icon" onclick="toggle()"></div>
+            </div>
+        </header>
+
+        <section class="shop-hero">
+            <h1 class="products-title">Our Products</h1>
+            <p class="tagline">Premium Quality Herbs & Spices</p>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="herbs">Herbs</button>
+                <button class="filter-btn" data-filter="spices">Spices</button>
+                <button class="filter-btn" data-filter="mixes">Mixes</button>
+            </div>
+        </section>
+
+        <div class="pop">Added to cart <i class='bx bx-check'></i></div>
+        <div class="list"></div>
+    </div>
+
+    <div class="cart">
+        <h1>Cart</h1>
+        <ul class="listcart"></ul>
+        <div class="checkout">
+            <div class="total" onclick="wb()">0</div>
+            <div class="closeshopping">Close</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Dev's Herbals</h4>
+                <p>Bringing nature's goodness to your table with premium quality herbs and spices.</p>
+                <div class="footer-social">
+                    <a href="#" onclick="wb()"><i class="ri-whatsapp-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="mail.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                    <li><i class="ri-map-pin-line"></i> 123 Herbal Street, Chennai</li>
+                    <li><i class="ri-phone-line"></i> +91 94880 19244</li>
+                    <li><i class="ri-mail-line"></i> info@devsherbals.com</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get updates about our products</p>
+                <form class="footer-subscribe">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit"><i class="ri-send-plane-line"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dev's Herbals. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
