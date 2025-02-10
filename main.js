@@ -207,7 +207,7 @@ let products = [
     {
         id: 9,
         name: "Kolumbu Thul",
-        image: 'img/products/kolumbu thul.png',
+        image: 'img/products/Kolumbu thul.png',
         description: "Kolumbu Thul is a flavorful blend of kolumbu and thul, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
         category: "spices",
 
