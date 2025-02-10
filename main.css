@@ -681,12 +681,13 @@ span{
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    padding: 0;
 }
 
 .quantity-btn:hover:not(.disabled) {
@@ -2024,5 +2025,184 @@ footer {
     }
     50% {
         transform: translateY(-10px);
+    }
+}
+
+/* Variant Selector Styles */
+.variant-selector {
+    margin: 10px 0;
+    position: relative;
+}
+
+.variant-selector select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+}
+
+.variant-selector select:hover {
+    border-color: rgb(118, 178, 27);
+    box-shadow: 0 2px 8px rgba(118, 178, 27, 0.1);
+}
+
+.variant-selector select:focus {
+    outline: none;
+    border-color: rgb(118, 178, 27);
+    box-shadow: 0 0 0 3px rgba(118, 178, 27, 0.1);
+}
+
+.variant-selector select option {
+    padding: 10px;
+}
+
+.variant-selector select option:disabled {
+    color: #999;
+    font-style: italic;
+    background-color: #f5f5f5;
+}
+
+/* Add to Cart Button States */
+.add-to-cart-btn {
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:disabled {
+    background-color: #cccccc !important;
+    cursor: not-allowed;
+    transform: none !important;
+    opacity: 0.7;
+}
+
+.add-to-cart-btn:disabled:hover {
+    background-color: #cccccc !important;
+    box-shadow: none !important;
+}
+
+.add-to-cart-btn:disabled i {
+    opacity: 0.5;
+}
+
+/* Price Display */
+.price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(118, 178, 27);
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .variant-selector select {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .variant-selector {
+        margin: 8px 0;
+    }
+
+    .variant-selector select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Hover and Focus States */
+.list .item:hover .variant-selector select {
+    border-color: rgb(118, 178, 27);
+}
+
+/* Animation for price changes */
+@keyframes priceUpdate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.price.updating {
+    animation: priceUpdate 0.3s ease;
+}
+
+/* Mobile adjustments for cart */
+@media (max-width: 768px) {
+    .cart .listcart .item {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .quantity-controls {
+        padding: 8px 15px;
+        gap: 15px;
+        margin: 10px 0;
+        width: fit-content;
+    }
+
+    .quantity-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+
+    .quantity-display {
+        font-size: 1.4rem;
+        min-width: 30px;
+    }
+
+    .item-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart .listcart .item {
+        padding: 10px;
+    }
+
+    .quantity-controls {
+        padding: 6px 12px;
+        gap: 12px;
+    }
+
+    .quantity-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.6rem;
+    }
+
+    .quantity-display {
+        font-size: 1.3rem;
+    }
+
+    .item-total {
+        font-size: 0.9rem;
     }
 }

@@ -46,54 +46,275 @@ closeshop.addEventListener("click", ()=> {
 
 let products = [
     {
-        id:1,
-        name:"Black Rice",
-        qt:"Quantity: " + "250Gm",
-        image:'img/products/black rice1.png',
-        description:"Black Rice is a nutrient-dense, antioxidant-rich rice with a deep purple hue, offering a slightly nutty flavor. It's high in fiber, iron, and protein, promoting heart health and digestion.",
-        price: 100
+        id: 1,
+        name: "Black Rice",
+        image: 'img/products/black rice1.png',
+        description: "Black Rice is a nutrient-dense, antioxidant-rich rice with a deep purple hue, offering a slightly nutty flavor. It's high in fiber, iron, and protein, promoting heart health and digestion.",
+        category: "herbs",
+        variants: [
+            {
+                id: '1-250g',
+                weight: '250g',
+                price: 130,
+                stock: 50
+            },
+            {
+                id: '1-500g',
+                weight: '500g',
+                price: 230,
+                stock: 30
+            },
+        ]
     },
     {
-        id:2,
-        name:"Idly Podi",
-        qt:"Quantity: " + "250Gm",
-        image:'img/products/idly podi1.png',
-        description:"Idly Podi, also known as 'gunpowder,' is a spicy South Indian condiment made from roasted lentils, spices, and seeds. It's typically mixed with oil and enjoyed with idlis or dosas.",
-        price: 125
+        id: 2,
+        name: "Idly Podi",
+        image: 'img/products/idly podi1.png',
+        description: "Idly Podi, also known as 'gunpowder,' is a spicy South Indian condiment made from roasted lentils, spices, and seeds. It's typically mixed with oil and enjoyed with idlis or dosas.",
+        category: "spices",
+        variants: [
+            {
+                id: '2-100g',
+                weight: '100g',
+                price: 50,
+                stock: 50
+
+            },
+        ]
     },
     {
-        id:3,
-        name:"Millet Dosa mix",
-        qt:"Quantity: " + "250Gm",
-        image:'img/products/millet dosa mix1.png',
-        description:"Millet Dosa Mix is a nutritious, ready-to-make blend of millets and lentils, offering a fiber-rich, gluten-free, and wholesome option for a healthy breakfast.",
-        price: 95
+        id: 3,
+        name: "Millet Dosa mix",
+        image: 'img/products/millet dosa mix1.png',
+        description: "Millet Dosa Mix is a nutritious, ready-to-make blend of millets and lentils, offering a fiber-rich, gluten-free, and wholesome option for a healthy breakfast.",
+        category: "mixes",
+        variants: [
+            {
+                id: '3-400g',
+                weight: '400g',
+                price: 95,
+                stock: 40
+
+            },
+        ]
     },
     {
-        id:4,
-        name:"Multi Millet Magic mix",
-        qt:"Quantity: " + "250Gm",
-        image:'img/products/multi millet magic mix1.png',
-        description:"Multi Millet Mix is a nutritious blend of various millets, rich in fiber, protein, and essential nutrients. It's a versatile, gluten-free option for preparing healthy porridges, dosas, or rotis",
-        price: 100
+        id: 4,
+        name: "Multi Millet Magic mix",
+        image: 'img/products/multi millet magic mix1.png',
+        description: "Multi Millet Mix is a nutritious blend of various millets, rich in fiber, protein, and essential nutrients. It's a versatile, gluten-free option for preparing healthy porridges, dosas, or rotis",
+        category: "mixes",
+        variants: [
+            {
+                id: '4-250g',
+                weight: '250g',
+                price: 110,
+                stock: 45
+            },
+            {
+                id: '4-500g',
+                weight: '500g',
+                price: 200,
+                stock: 30
+            },
+        ]
     },
     {
-        id:5,
-        name:"Parupu Podi",
-        qt:"Quantity: " + "250Gm",
-        image:'img/products/parupu podi1.png',
-        description:"Parupu Podi is a flavorful South Indian spice mix made from roasted lentils and spices. It's commonly used as a condiment for rice or as a seasoning for various dishes.",
-        price: 150
+        id: 5,
+        name: "Parupu Podi",
+        image: 'img/products/parupu podi1.png',
+        description: "Parupu Podi is a flavorful South Indian spice mix made from roasted lentils and spices. It's commonly used as a condiment for rice or as a seasoning for various dishes.",
+        category: "spices",
+        variants: [
+            {
+                id: '5-100g',
+                weight: '100g',
+                price: 60,
+                stock: 35
+
+            },
+        ]
     },
     {
-        id:6,
-        name:"Sprouted Mix",
-        qt:"Quantity: " + "250Gm",
-        image:'img/products/sprouted mix1.png',
-        description:"Sprouted Mix is a nutritious blend of sprouted grains and legumes, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
-        price: 110
-    }
+        id: 6,
+        name: "Sprouted Mix",
+        image: 'img/products/sprouted mix1.png',
+        description: "Sprouted Mix is a nutritious blend of sprouted grains and legumes, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        category: "mixes",
+        variants: [
+            {
+                id: '6-250g',
+                weight: '250g',
+                price: 110,
+                stock: 40
+            },
+            {
+                id: '6-500g',
+                weight: '500g',
+                price: 200,
+                stock: 30
+            },
+        ]
+    },
+    {
+        id: 7,
+        name: "Atta Noodles",
+        image: 'img/products/atta noodels.png',
+        description: "Atta Noodles is a flavorful blend of atta and noodles, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        category: "mixes",
+
+        variants: [
+            {
+                id: '7-200g',
+                weight: '200g',
+                price: 45,
+                stock: 40
+            },
+
+        ]
+    },
+    {
+        id: 8,
+        name: "Ullundu kanji Mix",
+        image: 'img/products/ullundu kanji.png',
+        description: "Ullundu kanji Mix is a flavorful blend of ullundu and kanji, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        category: "mixes",
+
+        variants: [
+            {
+                id: '8-250g',
+                weight: '250g',
+                price: 110,
+                stock: 40
+            },
+
+            {
+                id: '8-500g',
+                weight: '500g',
+                price: 200,
+                stock: 25
+            },
+
+            {
+                id: '8-1kg',
+                weight: '1kg',
+                price: 380,
+                stock: 15
+            }
+
+        ]
+    },
+    {
+        id: 9,
+        name: "Kolumbu Thul",
+        image: 'img/products/kolumbu thul.png',
+        description: "Kolumbu Thul is a flavorful blend of kolumbu and thul, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        category: "spices",
+
+
+        variants: [
+            {
+                id: '9-250g',
+                weight: '250g',
+                price: 130,
+                stock: 40
+
+            },
+            {
+                id: '9-500g',
+                weight: '500g',
+                price: 250,
+                stock: 25
+            },
+
+        ]
+    },
+    {
+        id: 10,
+        name: "Red Chilly Powder",
+        image: 'img/products/Red Chilly Powder.png',
+        description: "Red Chilly Powder is a flavorful blend of red chilly, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        category: "spices",
+        variants: [
+            {
+                id: '10-100g',
+                weight: '100g',
+                price: 70,
+                stock: 40
+
+            },
+
+        ]
+    }, 
+    {
+        id: 11,
+        name: "Horse Grain Mix",
+        image: 'img/products/horse grain mix.png',
+        description: "Horse Grain Mix is a flavorful blend of horse grain, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        category: "mixes",
+        variants: [
+            {
+                id: '11-250g',
+                weight: '250g',
+                price: 110,
+                stock: 40
+
+            },
+            {
+                id: '11-500g',
+                weight: '500g',
+                price: 200,
+                stock: 25
+            },
+
+        ]
+    },
+    {
+        id: 12,
+        name: "Multigrain Atta",
+        image: 'img/products/multigrain atta.png',
+        description: "Multigrain Atta is a flavorful blend of multigrain, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        category: "mixes",
+        variants: [
+            {
+                id: '12-1kg',
+                weight: '1kg',
+                price: 100,
+                stock: 40
+
+
+            },
+            {
+                id: '12-500g',
+                weight: '500g',
+                price: 60,
+                stock: 25
+            },
+
+        ]
+    }, 
+    {
+        id: 13,
+        name: "Garlic Idly Podi",
+        image: 'img/products/garlic idly podi.png',
+        description: "Garlic Idly Podi is a flavorful blend of garlic, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        category: "spices",
+
+
+        variants: [
+
+            {
+                id: '13-100g',
+                weight: '100g',
+                price: 60,
+                stock: 40
+
+            },
+        ]
+    },   
 ];
+
+
 
 let listcards = [];
 
@@ -142,46 +363,7 @@ function addAnimations() {
 
 // Update your existing initapp function
 function initapp() {
-    let list = document.querySelector('.list');
-    list.innerHTML = ''; // Clear existing content
-    
-    // Add skeleton loaders
-    for(let i = 0; i < 6; i++) { // Assuming 6 products, adjust as needed
-        let skeleton = document.createElement('div');
-        skeleton.classList.add('item', 'skeleton-card');
-        skeleton.innerHTML = `
-            <div class="skeleton skeleton-img"></div>
-            <div class="skeleton skeleton-title"></div>
-            <div class="skeleton skeleton-qt"></div>
-            <div class="skeleton skeleton-desc"></div>
-            <div class="skeleton skeleton-price"></div>
-            <div class="skeleton skeleton-button"></div>
-        `;
-        list.appendChild(skeleton);
-    }
-
-    // Load actual products with delay to show skeleton
-    setTimeout(() => {
-        list.innerHTML = ''; // Clear skeletons
-        
-        products.forEach((value, key) => {
-            let newdiv = document.createElement('div');
-            newdiv.classList.add("item");
-            
-            newdiv.innerHTML = `
-                <img src="${value.image}" alt="${value.name}">
-                <div class="title">${value.name}</div>
-                <div class="qt">${value.qt}</div>
-                <div class="description">${value.description}</div>
-                <div class="price">₹${value.price}</div>
-                <button onclick="addtocart(${key})">
-                    <i class="ri-shopping-cart-line"></i>
-                    Add To Cart
-                </button>
-            `;
-            list.appendChild(newdiv);
-        });
-    }, 1000); // 1 second delay, adjust as needed
+    filterProducts('all');
 }
 
 // Initialize the app when DOM is loaded
@@ -189,15 +371,34 @@ document.addEventListener('DOMContentLoaded', () => {
     initapp();
     loadCart();
     
-    // Add click event for shopping cart icon
-    const cartIcon = document.querySelector('.shoping');
-    cartIcon.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent event bubbling
-        openCart();
+    // Add filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const category = button.getAttribute('data-filter');
+            filterProducts(category);
+        });
     });
 
+    // Add click event for shopping cart icon
+    const cartIcon = document.querySelector('.shoping');
+    if (cartIcon) {
+        cartIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openCart();
+        });
+    }
+
     // Close cart button
-    document.querySelector('.closeshopping').addEventListener('click', closeCart);
+    const closeShopBtn = document.querySelector('.closeshopping');
+    if (closeShopBtn) {
+        closeShopBtn.addEventListener('click', closeCart);
+    }
 });
 
 function reloadCard() {
@@ -209,55 +410,54 @@ function reloadCard() {
     let count = 0;
     let totalPrice = 0;
     
-    // Create a new array without null values
-    listcards = listcards.filter(item => item !== null);
-    
-    listcards.forEach((value, key) => {
-        totalPrice = totalPrice + value.price * value.quantity;
-        count = count + value.quantity;
+    Object.entries(listcards).forEach(([cartKey, item]) => {
+        if (!item) return;
+        
+        const product = products.find(p => p.id === item.id);
+        const variant = product.variants.find(v => v.id === item.variantId);
+        
+        totalPrice += item.price * item.quantity;
+        count += item.quantity;
         
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
             <div class="item-image">
-                <img src="${value.image}" alt="${value.name}">
+                <img src="${item.image}" alt="${item.name}">
             </div>
             <div class="item-details">
                 <div class="item-header">
-                    <div class="name">${value.name}</div>
-                    <button class="remove-item" onclick="removeItem(${key})">
+                    <div class="name">${item.name} (${item.weight})</div>
+                    <button class="remove-item" onclick="removeItem('${cartKey}')">
                         <i class="ri-close-line"></i>
                     </button>
                 </div>
-                <div class="qt">${value.qt}</div>
                 <div class="item-footer">
-                    <div class="price">₹${value.price}</div>
+                    <div class="price">₹${item.price}</div>
                     <div class="quantity-controls">
-                        <button onclick="changeQuantity(${key}, ${value.quantity - 1})"
-                                class="quantity-btn ${value.quantity <= 1 ? 'disabled' : ''}">
+                        <button onclick="changeQuantity('${cartKey}', ${item.quantity - 1})"
+                                class="quantity-btn ${item.quantity <= 1 ? 'disabled' : ''}">
                             <i class="ri-subtract-line"></i>
                         </button>
-                        <span class="quantity-display">${value.quantity}</span>
-                        <button onclick="changeQuantity(${key}, ${value.quantity + 1})"
-                                class="quantity-btn">
+                        <span class="quantity-display">${item.quantity}</span>
+                        <button onclick="changeQuantity('${cartKey}', ${item.quantity + 1})"
+                                class="quantity-btn"
+                                ${item.quantity >= variant.stock ? 'disabled' : ''}>
                             <i class="ri-add-line"></i>
                         </button>
                     </div>
                 </div>
                 <div class="item-total">
-                    Total: ₹${value.price * value.quantity}
+                    Total: ₹${item.price * item.quantity}
                 </div>
             </div>`;
         listCard.appendChild(newDiv);
     });
     
-    // Update cart counter and total
     total.innerText = `₹${totalPrice}`;
     quantity.innerText = count;
     
-    // Update cart status
     updateCartStatus(count);
-    // Save cart
     saveCart();
 }
 
@@ -278,18 +478,35 @@ function updateCartStatus(count) {
     }
 }
 
-function addtocart(key) {
-    if(listcards[key] == null) {
-        listcards[key] = JSON.parse(JSON.stringify(products[key]));
-        listcards[key].quantity = 1;
+function addtocart(productKey, variantId) {
+    const product = products.find(p => p.id === productKey + 1); // Add 1 because product IDs start at 1
+    const variant = product.variants.find(v => v.id === variantId);
+    
+    if (!variant || variant.stock <= 0) {
+        showNotification('Sorry, this item is out of stock');
+        return;
+    }
+
+    const cartKey = `${productKey}-${variantId}`;
+    
+    if (!listcards[cartKey]) {
+        listcards[cartKey] = {
+            ...product,
+            variantId: variantId,
+            weight: variant.weight,
+            price: variant.price,
+            quantity: 1
+        };
     } else {
-        listcards[key].quantity += 1;
+        if (listcards[cartKey].quantity >= variant.stock) {
+            showNotification('Sorry, no more stock available');
+            return;
+        }
+        listcards[cartKey].quantity += 1;
     }
     
     reloadCard();
-    // Show notification
-    showNotification(`Added ${products[key].name} to cart`);
-    // Open cart if not already open
+    showNotification(`Added ${product.name} (${variant.weight}) to cart`);
     openCart();
 }
 
@@ -307,7 +524,9 @@ function removeItem(key) {
     delete listcards[key];
     
     // Clean up the array by removing null entries
-    listcards = listcards.filter(item => item !== null);
+    listcards = Object.fromEntries(
+        Object.entries(listcards).filter(([_, value]) => value !== null)
+    );
     
     // Update the cart display
     reloadCard();
@@ -365,13 +584,13 @@ function closeCart() {
     }
 }
 
-function wb(){
+function wb() {
     let message = "Order Details:\n\n";
     let total = 0;
     
-    listcards.forEach((item) => {
-        if(item != null) {
-            message += `${item.name} x ${item.quantity} = ₹${item.price * item.quantity}\n`;
+    Object.values(listcards).forEach((item) => {
+        if(item) {
+            message += `${item.name} (${item.weight}) x ${item.quantity} = ₹${item.price * item.quantity}\n`;
             total += item.price * item.quantity;
         }
     });
@@ -590,4 +809,154 @@ function initIndexAnimations() {
 document.addEventListener('DOMContentLoaded', function() {
     initIndexAnimations();
 });
+
+// Add function to update price when variant is selected
+function updatePrice(selectElement, productKey) {
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    const price = selectedOption.getAttribute('data-price');
+    const stock = selectedOption.getAttribute('data-stock');
+    const variantId = selectElement.value;
+    
+    // Update price display
+    document.getElementById(`price-${productKey}`).textContent = `₹${price}`;
+    
+    // Update add to cart button
+    const addButton = document.getElementById(`add-btn-${productKey}`);
+    if (stock <= 0) {
+        addButton.disabled = true;
+        addButton.innerHTML = '<i class="ri-shopping-cart-line"></i> Out of Stock';
+    } else {
+        addButton.disabled = false;
+        addButton.innerHTML = '<i class="ri-shopping-cart-line"></i> Add To Cart';
+        // Update onclick handler with new variant
+        addButton.setAttribute('onclick', `addtocart(${productKey}, '${variantId}')`);
+    }
+}
+
+// Add new filter function
+function filterProducts(category) {
+    const list = document.querySelector('.list');
+    
+    // First, fade out existing items
+    const existingItems = document.querySelectorAll('.item');
+    existingItems.forEach(item => {
+        item.classList.add('fade-out');
+    });
+
+    // Clear list after fade out
+    setTimeout(() => {
+        list.innerHTML = '';
+        
+        // Add skeleton loaders
+        for(let i = 0; i < 3; i++) {
+            let skeleton = document.createElement('div');
+            skeleton.classList.add('item', 'skeleton-card');
+            skeleton.innerHTML = `
+                <div class="skeleton skeleton-img"></div>
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-qt"></div>
+                <div class="skeleton skeleton-desc"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-button"></div>
+            `;
+            list.appendChild(skeleton);
+        }
+
+        // Filter and show new items
+        setTimeout(() => {
+            list.innerHTML = '';
+            
+            const filteredProducts = category === 'all' 
+                ? products 
+                : products.filter(product => product.category === category);
+            
+            // Create all items with opacity 0
+            filteredProducts.forEach((product) => {
+                let newdiv = document.createElement('div');
+                newdiv.classList.add("item");
+                newdiv.style.opacity = '0';
+                
+                const defaultVariant = product.variants[0];
+                
+                newdiv.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="title">${product.name}</div>
+                    <div class="variant-selector">
+                        <select onchange="updatePrice(this, ${product.id - 1})" data-product-key="${product.id - 1}">
+                            ${product.variants.map(variant => `
+                                <option value="${variant.id}" 
+                                        ${variant.stock <= 0 ? 'disabled' : ''}
+                                        data-price="${variant.price}"
+                                        data-stock="${variant.stock}">
+                                    ${variant.weight} - ₹${variant.price} 
+                                    ${variant.stock <= 0 ? '(Out of Stock)' : ''}
+                                </option>
+                            `).join('')}
+                        </select>
+                    </div>
+                    <div class="description">${product.description}</div>
+                    <div class="price" id="price-${product.id - 1}">₹${defaultVariant.price}</div>
+                    <button onclick="addtocart(${product.id - 1}, '${defaultVariant.id}')" 
+                            class="add-to-cart-btn" 
+                            id="add-btn-${product.id - 1}"
+                            ${defaultVariant.stock <= 0 ? 'disabled' : ''}>
+                        <i class="ri-shopping-cart-line"></i>
+                        ${defaultVariant.stock <= 0 ? 'Out of Stock' : 'Add To Cart'}
+                    </button>
+                `;
+                list.appendChild(newdiv);
+            });
+
+            // Trigger reflow
+            list.offsetHeight;
+
+            // Fade in items with delay
+            const items = document.querySelectorAll('.item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.transition = 'opacity 0.3s ease';
+                    item.style.opacity = '1';
+                }, index * 100);
+            });
+        }, 500);
+    }, 300);
+}
+
+// Add these CSS rules to your stylesheet
+const style = document.createElement('style');
+style.textContent = `
+    .item {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    .fade-out {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .skeleton-card {
+        opacity: 0.7;
+        animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { opacity: 0.7; }
+        50% { opacity: 0.4; }
+        100% { opacity: 0.7; }
+    }
+`;
+document.head.appendChild(style);
+
+
+
+
+
+
+
+
+
+
+
+
 
