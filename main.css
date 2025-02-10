@@ -576,36 +576,22 @@ span{
 }
 
 .cart {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 400px;
-    height: 100vh;
-    background: #1b1b1b;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1000;
     display: flex;
     flex-direction: column;
-}
-
-.cart.active {
-    right: 0;
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    height: 100vh;
 }
 
 .cart h1 {
-    color: #fff;
     padding: 20px;
-    border-bottom: 1px solid #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0;
+    flex-shrink: 0; /* Prevents header from shrinking */
 }
 
 .listcart {
     flex: 1;
     overflow-y: auto;
     padding: 20px;
+    padding-bottom: 100px; /* Add padding to prevent items from being hidden behind checkout */
 }
 
 .listcart .item {
@@ -906,8 +892,17 @@ span{
 
 /* Cart total and buttons */
 .checkout {
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    width: 400px; /* Same as cart width */
     background: #1b1b1b;
+    padding: 20px;
     border-top: 1px solid #333;
+    display: flex;
+    gap: 15px;
+    z-index: 1001;
 }
 
 .total {
