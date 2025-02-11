@@ -160,7 +160,7 @@ let products = [
         id: 7,
         name: "Atta Noodles",
         image: 'img/products/atta noodels.png',
-        description: "Atta Noodles is a flavorful blend of atta and noodles, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        description: "Atta noodles are made from whole wheat flour, offering a healthier alternative to regular noodles with more fiber and nutrients.",
         category: "mixes",
 
         variants: [
@@ -177,7 +177,7 @@ let products = [
         id: 8,
         name: "Ullundu kanji Mix",
         image: 'img/products/ullundu kanji.png',
-        description: "Ullundu kanji Mix is a flavorful blend of ullundu and kanji, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        description: "Ulundu Kanji is a nutritious porridge made from black gram (urad dal), rice, and coconut milk, known for its rich protein content and health benefits.",
         category: "mixes",
 
         variants: [
@@ -208,7 +208,7 @@ let products = [
         id: 9,
         name: "Kolumbu Thul",
         image: 'img/products/Kolumbu thul.png',
-        description: "Kolumbu Thul is a flavorful blend of kolumbu and thul, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        description: "Kolumbu Thul is a flavorful South Indian curry broth, rich in spices, tamarind, and lentils, enhancing rice and side dishes.",
         category: "spices",
 
 
@@ -233,7 +233,7 @@ let products = [
         id: 10,
         name: "Red Chilly Powder",
         image: 'img/products/Red Chilly Powder.png',
-        description: "Red Chilly Powder is a flavorful blend of red chilly, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        description: "Red chili powder is a vibrant spice made from dried red chilies, adding heat, color, and flavor to various dishes.",
         category: "spices",
         variants: [
             {
@@ -250,7 +250,7 @@ let products = [
         id: 11,
         name: "Horse Grain Mix",
         image: 'img/products/horse grain mix.png',
-        description: "Horse Grain Mix is a flavorful blend of horse grain, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        description: "Horse grain mix is a nutritious blend of grains, legumes, and minerals, formulated to provide balanced energy and health benefits for horses.",
         category: "mixes",
         variants: [
             {
@@ -273,7 +273,7 @@ let products = [
         id: 12,
         name: "Multigrain Atta",
         image: 'img/products/multigrain atta.png',
-        description: "Multigrain Atta is a flavorful blend of multigrain, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        description: "Multigrain atta is a nutritious flour blend made from various grains like wheat, barley, millet, and oats, offering enhanced fiber, protein, and health benefits.",
         category: "mixes",
         variants: [
             {
@@ -297,7 +297,7 @@ let products = [
         id: 13,
         name: "Garlic Idly Podi",
         image: 'img/products/garlic idly podi.png',
-        description: "Garlic Idly Podi is a flavorful blend of garlic, rich in protein, vitamins, and enzymes. It enhances digestion and adds a wholesome touch to salads and soups.",
+        description: "Garlic idly podi is a flavorful South Indian spice powder made with roasted lentils, garlic, red chilies, and spices, enhancing idli and dosa with a spicy kick.",
         category: "spices",
 
 
